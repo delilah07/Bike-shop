@@ -1,2 +1,3 @@
-# Bike-shop
-Bike shp using Vite, HTML, SCSS, JS, GSAP
+Bike-shop
+
+Bike shop using Vite, HTML, SCSS, JS, GSAP
