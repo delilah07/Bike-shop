@@ -1,0 +1,52 @@
+.icon {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: currentColor;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  &-location {
+    &::before {
+      mask-image: var(--icon-location);
+    }
+  }
+
+  &-phone {
+    &::before {
+      mask-image: var(--icon-phone);
+    }
+  }
+
+  &-fb {
+    &::before {
+      mask-image: var(--icon-fb);
+    }
+  }
+
+  &-insta {
+    &::before {
+      mask-image: var(--icon-insta);
+    }
+  }
+
+  &-youtube {
+    &::before {
+      mask-image: var(--icon-youtube);
+    }
+  }
+
+  &-x {
+    &::before {
+      mask-image: var(--icon-x);
+    }
+  }
+}
