@@ -1,0 +1,29 @@
+@use '../../../../styles/mixins/' as *;
+
+.hero {
+  background-image: url(/src/assets/images/home/hero-bg.webp);
+  color: var(--c-white);
+  @include bg-cover;
+
+  &__inner {
+    height: 806px;
+    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title {
+    margin-bottom: 50px;
+  }
+  .text {
+    margin-bottom: 20px;
+    color: #d6dee8;
+  }
+
+  .btn {
+    @include hover {
+      border-color: var(--c-white);
+    }
+  }
+}
