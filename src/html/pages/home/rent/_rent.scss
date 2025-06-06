@@ -1,0 +1,75 @@
+@use '../../../../styles/mixins/' as *;
+.rent {
+  color: var(--c-white);
+  background: linear-gradient(90deg, #381c75 93%, transparent 93%);
+  padding-block: 80px 130px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  .content {
+    flex-basis: 50%;
+  }
+  .title {
+    margin-bottom: 50px;
+  }
+  .text {
+    margin-bottom: 30px;
+  }
+  &-price {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-basis: 50%;
+    gap: 60px 10px;
+  }
+}
+.price {
+  &-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &::before {
+      content: '';
+      position: relative;
+      width: 36px;
+      height: 36px;
+      @include bg-contain;
+    }
+    &.icon-alarm {
+      &::before {
+        background-image: var(--icon-alarm);
+      }
+    }
+    &.icon-time {
+      &::before {
+        background-image: var(--icon-time);
+      }
+    }
+    &.icon-sandclock {
+      &::before {
+        background-image: var(--icon-sandclock);
+      }
+    }
+    &.icon-calendar {
+      &::before {
+        background-image: var(--icon-calendar);
+      }
+    }
+  }
+}
+.icon-alarm {
+}
+.price-carrd__title {
+}
+.color-accent {
+}
+.price-card__text {
+}
+.icon-time {
+}
+.icon-sandclock {
+}
+.icon-calendar {
+}
