@@ -22,6 +22,10 @@
 
   &--border {
     border-color: var(--c-gray);
+
+    @include hover {
+      border-color: var(--c-red);
+    }
   }
 
   &--white {

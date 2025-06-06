@@ -1,0 +1,26 @@
+.about {
+  padding-block: 100px;
+
+  &__inner {
+    display: flex;
+    gap: 0;
+    align-items: center;
+  }
+  img {
+    width: 50%;
+  }
+  .content {
+    padding-left: 100px;
+    flex: 0 0 50%;
+  }
+  .title {
+    margin-bottom: 50px;
+  }
+  .text {
+    margin-bottom: 25px;
+  }
+  .btns {
+    display: flex;
+    gap: 10px;
+  }
+}
