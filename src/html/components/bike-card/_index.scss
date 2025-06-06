@@ -1,0 +1,32 @@
+.bike-card {
+  padding: 16px;
+  box-shadow: 0 0 32px 8px rgba(0, 0, 0, 0.08);
+
+  &__img {
+    margin-bottom: 25px;
+  }
+  &__content {
+    padding-block: 16px;
+  }
+  &__title {
+    font-weight: 500;
+  }
+  &__label {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: var(--c-light-gray);
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__price {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  &__cost {
+    font-weight: 600;
+  }
+}

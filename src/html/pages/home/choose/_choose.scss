@@ -1,0 +1,22 @@
+.choose {
+  padding-block: 100px;
+  &__inner {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .title {
+    margin-bottom: 50px;
+  }
+}
+.container {
+}
+.choose .content {
+}
+
+.btn {
+}
+.bike-list {
+  display: flex;
+  gap: 10px;
+}
