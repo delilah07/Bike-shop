@@ -3,7 +3,13 @@ import { Navigation } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () =>
+  window.scrollY > header.offsetHeight
+    ? header.classList.add('scrolled')
+    : header.classList.remove('scrolled')
+);
 
 const swiper = new Swiper('.feedback .swiper', {
   modules: [Navigation],

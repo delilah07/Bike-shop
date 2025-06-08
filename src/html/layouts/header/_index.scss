@@ -1,7 +1,8 @@
 @use '../../../styles/mixins' as *;
 .header {
-  background-color: #212223;
+  background-color: var(--c-dark-gray);
   color: var(--c-white);
+  z-index: 100;
 
   &-top {
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
