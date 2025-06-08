@@ -1,0 +1,28 @@
+.request {
+  color: var(--c-white);
+  padding-block: 80px 100px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 78%;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(90deg, #381c75 95%, transparent 95%);
+    z-index: -1;
+  }
+  &__inner {
+    display: flex;
+  }
+  &__map {
+    width: 50%;
+  }
+}
+
+.form-wrapper {
+  flex-basis: 50%;
+  padding-left: 80px;
+}
