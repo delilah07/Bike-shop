@@ -1,0 +1,25 @@
+.breadcrumbs {
+  padding-block: 20px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--c-gray);
+  }
+  &__link {
+    &::after {
+      content: '/';
+      width: 16px;
+      text-align: center;
+      margin: 0 3px;
+    }
+  }
+  &__current {
+    color: var(--c-dark-gray);
+  }
+}
