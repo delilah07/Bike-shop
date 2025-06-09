@@ -8,10 +8,11 @@
 
   .discount__inner {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
   .content {
     max-width: 400px;
+    width: 100%;
   }
   .title {
     color: var(--c-light-gray);
