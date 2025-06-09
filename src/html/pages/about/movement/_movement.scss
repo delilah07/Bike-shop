@@ -52,7 +52,7 @@
   }
 
   @include hover {
-    filter: blur(1px);
+    filter: blur(0.5px);
 
     &::before {
       background-color: var(--c-red);
