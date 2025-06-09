@@ -1,51 +1,7 @@
 @use '../../../../styles/mixins/' as *;
 
-.advantages {
-  padding-block: 100px;
-
-  &__inner {
-    display: flex;
-    gap: 0;
-    align-items: center;
-  }
-  img {
-    width: 50%;
-  }
+.service-advantages {
   .content {
     padding-left: 80px;
-    flex: 0 0 50%;
-  }
-  .title {
-    margin-bottom: 50px;
-  }
-  .text {
-    margin-bottom: 25px;
-  }
-  &__list {
-    columns: 2;
-
-    li + li {
-      margin-top: 5px;
-    }
-
-    li {
-      font-size: 16px;
-      line-height: 25px;
-      color: var(--c-gray);
-      display: flex;
-
-      gap: 12px;
-
-      &::before {
-        content: '';
-        @include mask-contain;
-        position: relative;
-        width: 14px;
-        height: 14px;
-        mask-image: var(--icon-list-item);
-        background-color: var(--c-red);
-        top: 6px;
-      }
-    }
   }
 }
