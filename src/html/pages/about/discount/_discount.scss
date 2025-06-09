@@ -1,0 +1,25 @@
+@use '../../../../styles/mixins/' as *;
+
+.discount {
+  padding-block: 80px;
+  background-image: url(/src/assets/images/about/discount-bg.webp);
+  @include bg-cover;
+  background-position: left;
+
+  .discount__inner {
+    display: flex;
+    justify-content: end;
+  }
+  .content {
+    max-width: 400px;
+  }
+  .title {
+    color: var(--c-light-gray);
+    span {
+      color: var(--c-white);
+    }
+  }
+  .btn {
+    margin-top: 40px;
+  }
+}
