@@ -1,5 +1,7 @@
+@use '../../../../styles/mixins/' as *;
+
 .about {
-  padding-block: 100px;
+  @include size('padding-block', 100, 30, $lg); //  padding-block: 100px;
 
   &__inner {
     display: flex;
@@ -8,13 +10,21 @@
   }
   img {
     width: 50%;
+
+    @include rmax($sm) {
+      display: none;
+    }
   }
   .content {
-    padding-left: 100px;
     flex: 0 0 50%;
+    @include size('padding-left', 100, 15, $lg); // padding-left: 100px;
   }
   .title {
     margin-bottom: 50px;
+
+    @include rmax($sm) {
+      margin-bottom: 25px;
+    }
   }
   .text {
     margin-bottom: 25px;
