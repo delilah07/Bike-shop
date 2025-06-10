@@ -2,14 +2,26 @@
 .rent {
   color: var(--c-white);
   background: linear-gradient(90deg, #381c75 95%, transparent 95%);
-  padding-block: 80px 130px;
+
+  @include size('padding-top', 80, 30, $lg); //padding-block: 80px 130px;
+  @include size('padding-bottom', 130, 30, $lg);
 
   &__inner {
     display: flex;
     align-items: center;
+
+    @include rmax($md) {
+      flex-direction: column;
+      gap: 35px;
+    }
   }
   .content {
-    flex-basis: 50%;
+    min-width: 50%;
+    @include size('padding-right', 200, 0, $lg); //padding-right: 200px;
+
+    @include rmax($lg) {
+      min-width: 30%;
+    }
   }
   .title {
     margin-bottom: 50px;
@@ -20,8 +32,15 @@
   &-price {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    flex-basis: 50%;
     gap: 60px 10px;
+    padding-right: 3vw;
+
+    @include rmax($md) {
+      gap: 30px 10px;
+    }
+    @include rmax($xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 .price {
@@ -29,6 +48,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    @include size('padding-right', 50, 0, $lg); //padding-right: 50px;
 
     &::before {
       content: '';
