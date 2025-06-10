@@ -3,16 +3,9 @@
 .address {
   padding-block: 80px 100px;
 
-  &__inner address {
-  }
-
   &__map {
     margin-top: 60px;
   }
-}
-.container {
-}
-.address .sr-only {
 }
 .address__list {
   display: grid;
@@ -22,6 +15,7 @@
 .address-card {
   position: relative;
   padding-left: 130px;
+  min-height: 100px;
 
   &::before,
   &::after {

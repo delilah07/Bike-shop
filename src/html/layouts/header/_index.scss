@@ -17,13 +17,27 @@
   &-bottom {
     padding: 30px 0;
   }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contact-info {
   display: flex;
   gap: 45px;
+  @include rmax($sm) {
+    font-size: 0;
+    gap: 10px;
+  }
 
   &__link {
+    transition: all 0.5s ease-in-out;
+
+    @include hover {
+      color: var(--c-red);
+    }
+
     &::before {
       background-color: var(--c-light-gray);
     }
@@ -53,6 +67,7 @@
       width: 100%;
       height: 1px;
       background-color: transparent;
+      transition: all 0.5s ease-in-out;
     }
 
     @include hover {
@@ -61,4 +76,23 @@
       }
     }
   }
+
+  @include rmax($sm) {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% - 10px);
+    left: 0;
+    padding: 50px 30px;
+    background-color: var(--c-red);
+    min-width: 100vw;
+    opacity: 0;
+    flex-direction: column;
+    gap: 25px;
+    transform: translateX(-110%);
+    transition: all 0.5s ease-in-out;
+  }
+}
+.burger.active + .menu {
+  transform: translateX(0);
+  opacity: 1;
 }

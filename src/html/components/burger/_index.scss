@@ -1,0 +1,52 @@
+@use '../../../styles/mixins/' as *;
+
+.burger {
+  min-width: 40px;
+  height: 32px;
+  position: relative;
+  z-index: 10;
+  color: var(--c-white);
+  cursor: pointer;
+
+  &__line,
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 1px);
+    height: 2px;
+    width: 100%;
+    background-color: currentColor;
+    transition: all 0.5s ease-in-out;
+  }
+  &::before,
+  &::after {
+    content: '';
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    top: calc(100% - 2px);
+  }
+
+  &.active {
+    .burger__line {
+      transform: scale(0);
+    }
+    &::before,
+    &::after {
+      top: 50%;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @include rmin($sm) {
+    display: none;
+  }
+}
