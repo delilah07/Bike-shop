@@ -1,7 +1,7 @@
 @use '../../../../styles/mixins/' as *;
 
 .advantages {
-  padding-block: 100px;
+  @include size('padding-block', 100, 30, $lg); // padding-block: 100px;
 
   &__inner {
     display: flex;
@@ -17,6 +17,10 @@
   }
   .title {
     margin-bottom: 50px;
+
+    @include rmax($sm) {
+      margin-bottom: 25px;
+    }
   }
   .text {
     margin-bottom: 25px;
