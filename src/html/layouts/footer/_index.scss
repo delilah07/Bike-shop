@@ -13,6 +13,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+
+    @include rmax($lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include rmax($sm) {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
   }
 
   &-title {
@@ -37,8 +45,12 @@
 .insta-blog {
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 75px);
+    grid-template-columns: repeat(2, 75px);
     gap: 10px;
+
+    @include rmax($sm) {
+      grid-template-columns: repeat(auto-fill, 75px);
+    }
 
     a {
       background-color: var(--c-white);
