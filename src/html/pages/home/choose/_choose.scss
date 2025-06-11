@@ -1,16 +1,45 @@
+@use '../../../../styles/mixins/' as *;
 .choose {
-  padding-block: 100px;
+  @include size('padding-block', 100, 30, $lg); //padding-block: 100px;
+
   &__inner {
     display: flex;
     gap: 10px;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .title {
     margin-bottom: 50px;
+
+    @include rmax($sm) {
+      margin-bottom: 25px;
+    }
+  }
+  @include rmax($sm) {
+    .btn {
+      margin-bottom: 15px;
+    }
   }
 }
 
 .bike-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+
+  @include rmax($sm) {
+    grid-template-columns: repeat(2, 1fr);
+
+    li:last-child {
+      display: none;
+    }
+  }
+  @include rmax($xs) {
+    margin: 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+
+    li:last-child {
+      display: block;
+    }
+  }
 }

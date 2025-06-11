@@ -25,6 +25,10 @@
   }
   .title {
     margin-bottom: 50px;
+
+    @include rmax($sm) {
+      margin-bottom: 25px;
+    }
   }
   .text {
     margin-bottom: 30px;
