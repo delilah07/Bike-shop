@@ -1,7 +1,12 @@
+@use '../../../../styles/mixins/' as *;
+
 .stats {
   &__inner {
     position: relative;
-    padding: 70px 45px 80px;
+
+    @include size('padding-top', 70, 30, $lg); // padding: 70px 45px 80px;
+    @include size('padding-bottom', 80, 30, $lg);
+    @include size('padding-inline', 45, 0, $lg);
 
     &::before {
       content: '';
@@ -18,6 +23,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0;
+
+    @include rmax($md) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 25px;
+    }
+    @include rmax($xs) {
+      grid-template-columns: 1fr;
+    }
   }
   &-card {
     text-align: center;
