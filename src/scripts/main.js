@@ -15,7 +15,12 @@ window.addEventListener('scroll', () =>
 //slider
 const swiper = new Swiper('.feedback .swiper', {
   modules: [Navigation],
-  slidesPerView: 2,
+  slidesPerView: 1,
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+    },
+  },
   navigation: {
     nextEl: '.feedback .swiper-button--next',
     prevEl: '.feedback .swiper-button--prev',
