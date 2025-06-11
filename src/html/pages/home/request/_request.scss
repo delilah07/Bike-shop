@@ -1,6 +1,9 @@
+@use '../../../../styles/mixins/' as *;
+
 .request {
   color: var(--c-white);
-  padding-block: 80px 100px;
+  @include size('padding-top', 80, 30, $lg); //padding-block: 80px 100px;;
+  @include size('padding-bottom', 100, 30, $lg);
   position: relative;
 
   &::after {
@@ -13,16 +16,39 @@
     left: 0;
     background: linear-gradient(90deg, #381c75 95%, transparent 95%);
     z-index: -1;
+
+    @include rmax($xl) {
+      height: 82%;
+    }
+    @include rmax($lg) {
+      height: 94%;
+    }
+    // @include rmax($md) {
+    //   height: 100%;
+    // }
   }
   &__inner {
     display: flex;
+
+    @include rmax($md) {
+      flex-direction: column-reverse;
+    }
   }
   &__map {
     width: 50%;
+
+    @include rmax($md) {
+      width: 95%;
+    }
   }
 }
 
 .form-wrapper {
   flex-basis: 50%;
-  padding-left: 80px;
+  @include size('padding-left', 80, 0, $lg); //padding-left: 80px;
+  padding-right: 8vw;
+
+  @include rmax($md) {
+    padding-bottom: 25px;
+  }
 }
