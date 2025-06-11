@@ -1,12 +1,22 @@
 @use '../.././../../styles/mixins/' as *;
 .why {
-  padding-block: 100px;
+  @include size('padding-block', 100, 30, $lg); // padding-block: 100px;
   background-image: url('/src/assets/images/home/why-bike.webp'),
     url('/src/assets/images/home/why-bg.webp');
   color: var(--c-white);
   background-size: 40%, 95% 90%;
   background-repeat: no-repeat;
-  background-position: left 9% bottom -3%, right top;
+  background-position: left 9% bottom -1%, right top;
+
+  @include rmax($lg) {
+    background-size: 70%, 95% 95%;
+    background-position: left -100% bottom -1%, right top;
+  }
+  @include rmax($xs) {
+    background-image: url('/src/assets/images/home/why-bg.webp');
+    background-size: 95% 100%;
+    background-position: right top;
+  }
 
   .container {
     display: flex;
@@ -16,9 +26,20 @@
     display: flex;
     flex-direction: column;
     flex-basis: 50%;
+
+    @include rmax($lg) {
+      flex-basis: 70%;
+    }
+    @include rmax($xs) {
+      flex-basis: 90%;
+    }
   }
   .title {
     margin-bottom: 50px;
+
+    @include rmax($sm) {
+      margin-bottom: 25px;
+    }
   }
 }
 
