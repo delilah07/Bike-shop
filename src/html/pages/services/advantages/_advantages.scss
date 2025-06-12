@@ -2,6 +2,6 @@
 
 .service-advantages {
   .content {
-    padding-left: 80px;
+    @include size('padding-left', 80, 0, $lg); //   padding-left: 80px;
   }
 }
