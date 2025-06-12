@@ -10,10 +10,18 @@
   }
   img {
     width: 50%;
+
+    @include rmax($sm) {
+      display: none;
+    }
   }
   .content {
     padding-right: 10px;
     flex: 0 0 50%;
+
+    @include rmax($sm) {
+      flex: 0 0 100%;
+    }
   }
   .title {
     margin-bottom: 50px;
