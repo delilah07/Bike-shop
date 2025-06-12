@@ -1,9 +1,18 @@
+@use '../../../../styles/mixins/' as *;
 .request-bike {
-  padding-block: 80px 100px;
+  @include size('padding-top', 80, 30, $lg); //  padding-block: 80px 100px;
+  @include size('padding-bottom', 100, 30, $lg);
   background-image: url(/src/assets/images/services/black-bicycle.webp);
   background-repeat: no-repeat;
   background-size: auto 80%;
   background-position: right center;
+
+  @include rmax($lg) {
+    background-size: 50% auto;
+  }
+  @include rmax($md) {
+    background-image: none;
+  }
 
   &__inner {
     display: flex;
@@ -12,6 +21,10 @@
   .form-wrapper {
     flex-basis: 450px;
     padding: 0;
+
+    @include rmax($md) {
+      flex-basis: 100%;
+    }
   }
 
   &__form {
