@@ -1,21 +1,39 @@
 @use '../../../../styles/mixins/' as *;
 
 .address {
-  padding-block: 80px 100px;
+  @include size('padding-top', 80, 30, $lg); // padding-block: 80px 100px;
+  @include size('padding-bottom', 100, 30, $lg);
 
   &__map {
-    margin-top: 60px;
+    @include size('margin-top', 60, 10, $lg); // margin-top: 60px;
   }
 }
 .address__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
+  @include rmax($xl) {
+    gap: 5px;
+  }
+
+  @include rmax($lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include rmax($sm) {
+    grid-template-columns: 1fr;
+  }
 }
 .address-card {
   position: relative;
   padding-left: 130px;
   min-height: 100px;
+
+  @include rmax($xl) {
+    padding-left: 70px;
+    min-height: initial;
+  }
 
   &::before,
   &::after {
@@ -30,6 +48,11 @@
     height: 100px;
     top: 0;
     left: 0;
+
+    @include rmax($xl) {
+      width: 50px;
+      height: 50px;
+    }
   }
   &::after {
     width: 50px;
@@ -38,6 +61,13 @@
     top: 25px;
     @include mask-contain;
     background-color: var(--c-white);
+
+    @include rmax($xl) {
+      width: 25px;
+      height: 25px;
+      left: 12.5px;
+      top: 12.5px;
+    }
   }
 
   &__title {
@@ -49,6 +79,7 @@
     font-weight: 300;
     font-size: 20px;
     line-height: 27px;
+    display: block;
   }
   &--location {
     &::after {
