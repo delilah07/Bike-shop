@@ -5,6 +5,7 @@
   @include size('padding-bottom', 100, 30, $lg);
 
   &__map {
+    min-height: 600px;
     @include size('margin-top', 60, 10, $lg); // margin-top: 60px;
   }
 }
