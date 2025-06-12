@@ -13,6 +13,10 @@
   .content {
     max-width: 400px;
     width: 100%;
+
+    @include rmax($md) {
+      max-width: 100%;
+    }
   }
   .title {
     color: var(--c-light-gray);
