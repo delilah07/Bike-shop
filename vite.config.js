@@ -4,6 +4,7 @@ import postcss from '@vituum/vite-plugin-postcss';
 import { copyFileSync } from 'fs';
 
 export default {
+  base: '/Bike-shop/',
   plugins: [
     vituum(),
     postcss(),
